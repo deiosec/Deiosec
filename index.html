@@ -223,19 +223,112 @@ font-size:10px;
 letter-spacing:2px;
 }
 
+
+/* MOBILE */
+
 @media(max-width:600px){
 
+header{
+height:auto;
+padding:22px 7%;
+flex-direction:column;
+align-items:flex-start;
+gap:18px;
+}
+
+.logo{
+font-size:17px;
+}
+
+nav{
+display:flex;
+gap:18px;
+}
+
 nav a{
-margin-left:10px;
+margin-left:0;
 font-size:9px;
 }
 
+.hero{
+min-height:75vh;
+padding:0 7%;
+}
+
 .hero h1{
+font-size:clamp(55px,18vw,100px);
 letter-spacing:-4px;
+}
+
+.hero p{
+font-size:13px;
+line-height:1.6;
+max-width:280px;
+}
+
+section{
+padding:80px 7%;
 }
 
 h2{
 font-size:36px;
+}
+
+.work{
+min-height:auto;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+padding:15px;
+}
+
+.work img{
+width:100%;
+height:auto;
+max-height:320px;
+object-fit:cover;
+}
+
+.project-info{
+width:100%;
+}
+
+.work h3{
+font-size:18px;
+}
+
+.work p{
+font-size:11px;
+line-height:1.6;
+}
+
+.project-details{
+margin-top:18px;
+}
+
+.project-details p{
+font-size:10px;
+line-height:1.6;
+}
+
+.project-link{
+margin-top:12px;
+font-size:10px;
+}
+
+.about{
+font-size:16px;
+line-height:1.8;
+}
+
+.contact{
+font-size:14px;
+}
+
+footer{
+padding:30px 7%;
+line-height:1.6;
 }
 
 }
@@ -245,6 +338,7 @@ font-size:36px;
 </head>
 
 <body>
+
 
 <header>
 
