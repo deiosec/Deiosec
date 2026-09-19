@@ -227,6 +227,22 @@ letter-spacing:2px;
 /* MOBILE */
 
 @media(max-width:600px){
+  .about-grid{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+.about-intro{
+font-size:22px;
+}
+
+.about-text{
+font-size:15px;
+}
+
+.about-side{
+gap:25px;
+}
 
 header{
 height:auto;
@@ -322,6 +338,56 @@ font-size:16px;
 line-height:1.8;
 }
 
+  .about-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:80px;
+max-width:1000px;
+}
+
+.about-main{
+max-width:650px;
+}
+
+.about-intro{
+font-size:28px;
+line-height:1.5;
+color:#f5f5f5;
+margin-bottom:30px;
+}
+
+.about-text{
+font-size:16px;
+line-height:1.8;
+color:#888;
+}
+
+.about-side{
+display:flex;
+flex-direction:column;
+gap:35px;
+}
+
+.about-item{
+padding-top:18px;
+border-top:1px solid #222;
+}
+
+.about-item span{
+display:block;
+font-size:9px;
+letter-spacing:3px;
+color:#555;
+margin-bottom:12px;
+}
+
+.about-item strong{
+font-size:12px;
+font-weight:normal;
+line-height:1.8;
+letter-spacing:1px;
+}
+  
 .contact{
 font-size:14px;
 }
@@ -619,13 +685,65 @@ Geometric Design
 
 <h2>Design with purpose.</h2>
 
-<p class="about">
+<div class="about-grid">
 
-DEIOCES is a graphic design studio focused on visual identity,
-logo design, poster design and creative digital aesthetics.
-We turn simple ideas into clear and distinctive visual experiences.
+<div class="about-main">
 
+<p class="about-intro">
+DEIOCES is a personal graphic design practice focused on
+turning simple ideas into distinctive visual experiences.
 </p>
+
+<p class="about-text">
+From posters and logos to geometric compositions and digital
+visuals, each project is an exploration of shape, balance,
+typography and visual identity.
+</p>
+
+</div>
+
+
+<div class="about-side">
+
+<div class="about-item">
+
+<span>FOCUS</span>
+
+<strong>
+Graphic Design<br>
+Visual Identity<br>
+Digital Aesthetics
+</strong>
+
+</div>
+
+
+<div class="about-item">
+
+<span>TOOLS</span>
+
+<strong>
+Canva<br>
+HTML & CSS
+</strong>
+
+</div>
+
+
+<div class="about-item">
+
+<span>APPROACH</span>
+
+<strong>
+Simple ideas.<br>
+Clear visuals.
+</strong>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
