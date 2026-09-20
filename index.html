@@ -27,6 +27,8 @@
 <script>
 const themeToggle = document.getElementById("themeToggle");
 
+themeToggle.textContent = "☀";
+
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
 
@@ -35,6 +37,8 @@ themeToggle.addEventListener("click", () => {
     } else {
         themeToggle.textContent = "☀";
     }
+});
+</script>
   
 body.light-mode{
     background:#fff !important;
