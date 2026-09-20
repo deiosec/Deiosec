@@ -24,21 +24,6 @@
 
 <style>
 
-<script>
-const themeToggle = document.getElementById("themeToggle");
-
-themeToggle.textContent = "☀";
-
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-
-    if (document.body.classList.contains("light-mode")) {
-        themeToggle.textContent = "☾";
-    } else {
-        themeToggle.textContent = "☀";
-    }
-});
-</script>
   
 body.light-mode{
     background:#fff !important;
@@ -572,65 +557,6 @@ flex-direction:column;
 align-items:flex-end;
 gap:8px;
 font-size:9px;
-}
-
-  /* FINAL LIGHT MODE FIX */
-
-
-.about-intro{
-color:#050505 !important;
-}
-
-.about-text{
-color:#666 !important;
-}
-
-.footer-logo{
-color:#050505 !important;
-}
-
-.footer-left p{
-color:#888 !important;
-}
-
-.footer-right{
-color:#888 !important;
-}
-
-.contact-intro{
-color:#666 !important;
-}
-
-.contact-item a,
-.contact-item p{
-color:#666 !important;
-}
-
-}
-  .button{
-color:#000 !important;
-border-color:#ccc !important;
-}
-
-.contact-button{
-color:#000 !important;
-border-color:#ccc !important;
-}
-
-/* FINAL DARK MODE FIX */
-
-@media (prefers-color-scheme: dark){
-
-.button{
-color:#fff !important;
-border-color:#444 !important;
-}
-
-.contact-button{
-color:#fff !important;
-border-color:#444 !important;
-}
-
 }
   
 /* MOBILE */
@@ -1222,11 +1148,16 @@ const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
 
-    if (document.body.classList.contains("light-mode")) {
-        themeToggle.textContent = "☀";
-    } else {
-        themeToggle.textContent = "☾";
-    }
+    <script>
+const themeToggle = document.getElementById("themeToggle");
+
+document.body.classList.remove("light-mode");
+themeToggle.textContent = "☀";
+
+themeToggle.addEventListener("click", () => {
+    const isLight = document.body.classList.toggle("light-mode");
+
+    themeToggle.textContent = isLight ? "☾" : "☀";
 });
 </script>
 
