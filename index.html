@@ -39,6 +39,7 @@ color:#f5f5f5;
 font-family:Arial,sans-serif;
 }
 
+
 /* LIGHT MODE */
 
 @media (prefers-color-scheme: light){
@@ -52,12 +53,20 @@ header{
 border-bottom:1px solid #e5e5e5;
 }
 
+.logo{
+color:#050505;
+}
+
 nav a{
 color:#777;
 }
 
 nav a:hover{
 color:#000;
+}
+
+.hero h1{
+color:#050505;
 }
 
 .hero p{
@@ -82,6 +91,50 @@ border-top:1px solid #e5e5e5;
 color:#999;
 }
 
+h2{
+color:#050505;
+}
+
+.work{
+background:#ffffff;
+border-color:#dddddd;
+color:#050505;
+}
+
+.work:hover{
+border-color:#000;
+}
+
+.work img{
+border-color:#ddd;
+}
+
+.work h3{
+color:#050505;
+}
+
+.work p{
+color:#333;
+}
+
+.project-link{
+color:#000;
+border-color:#000;
+}
+
+.project-link:hover{
+color:#20C9C3;
+border-color:#20C9C3;
+}
+
+.project-details p{
+color:#555;
+}
+
+.project-details strong{
+color:#222;
+}
+
 .about{
 color:#666;
 }
@@ -102,12 +155,24 @@ border-top:1px solid #e5e5e5;
 color:#999;
 }
 
+.about-item strong{
+color:#333;
+}
+
+.contact{
+color:#666;
+}
+
 .contact-intro{
 color:#666;
 }
 
 .contact-item{
 border-top:1px solid #e5e5e5;
+}
+
+.contact-item span{
+color:#999;
 }
 
 .contact-item a,
@@ -121,7 +186,7 @@ color:#000;
 
 footer{
 border-top:1px solid #e5e5e5;
-color:#999;
+color:#888;
 }
 
 .footer-logo{
@@ -137,7 +202,10 @@ color:#888;
 }
 
 }
-  
+
+
+/* HEADER */
+
 header{
 height:80px;
 display:flex;
@@ -164,6 +232,9 @@ margin-left:22px;
 nav a:hover{
 color:white;
 }
+
+
+/* HERO */
 
 .hero{
 min-height:85vh;
@@ -202,6 +273,9 @@ background:white;
 color:black;
 }
 
+
+/* SECTIONS */
+
 section{
 padding:110px 7%;
 border-top:1px solid #222;
@@ -219,12 +293,18 @@ font-size:45px;
 margin-bottom:30px;
 }
 
+
+/* ABOUT */
+
 .about{
 max-width:600px;
 color:#888;
 font-size:18px;
 line-height:1.8;
 }
+
+
+/* WORK */
 
 .work{
 min-height:280px;
@@ -301,6 +381,62 @@ letter-spacing:0;
 font-weight:bold;
 }
 
+
+/* ABOUT GRID */
+
+.about-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:80px;
+max-width:1000px;
+}
+
+.about-main{
+max-width:650px;
+}
+
+.about-intro{
+font-size:28px;
+line-height:1.5;
+color:#f5f5f5;
+margin-bottom:30px;
+}
+
+.about-text{
+font-size:16px;
+line-height:1.8;
+color:#888;
+}
+
+.about-side{
+display:flex;
+flex-direction:column;
+gap:35px;
+}
+
+.about-item{
+padding-top:18px;
+border-top:1px solid #222;
+}
+
+.about-item span{
+display:block;
+font-size:9px;
+letter-spacing:3px;
+color:#555;
+margin-bottom:12px;
+}
+
+.about-item strong{
+font-size:12px;
+font-weight:normal;
+line-height:1.8;
+letter-spacing:1px;
+}
+
+
+/* CONTACT */
+
 .contact{
 color:#888;
 }
@@ -362,6 +498,9 @@ color:white;
 .contact-button{
 margin-top:5px;
 }
+
+
+/* FOOTER */
 
 footer{
 padding:50px 7%;
@@ -503,41 +642,14 @@ gap:50px;
 
 .about-intro{
 font-size:22px;
-line-height:1.5;
-color:#f5f5f5;
-margin-bottom:30px;
 }
 
 .about-text{
 font-size:15px;
-line-height:1.8;
-color:#888;
 }
 
 .about-side{
-display:flex;
-flex-direction:column;
 gap:25px;
-}
-
-.about-item{
-padding-top:18px;
-border-top:1px solid #222;
-}
-
-.about-item span{
-display:block;
-font-size:9px;
-letter-spacing:3px;
-color:#555;
-margin-bottom:12px;
-}
-
-.about-item strong{
-font-size:12px;
-font-weight:normal;
-line-height:1.8;
-letter-spacing:1px;
 }
 
 .contact-grid{
