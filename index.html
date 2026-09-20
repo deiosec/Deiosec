@@ -215,6 +215,55 @@ text-decoration:none;
 color:white;
 }
 
+.contact-grid{
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:100px;
+max-width:1000px;
+}
+
+.contact-intro{
+max-width:500px;
+color:#888;
+font-size:17px;
+line-height:1.8;
+}
+
+.contact-info{
+display:flex;
+flex-direction:column;
+gap:35px;
+}
+
+.contact-item{
+padding-top:18px;
+border-top:1px solid #222;
+}
+
+.contact-item span{
+display:block;
+font-size:9px;
+letter-spacing:3px;
+color:#555;
+margin-bottom:12px;
+}
+
+.contact-item a,
+.contact-item p{
+color:#888;
+text-decoration:none;
+font-size:13px;
+line-height:1.8;
+}
+
+.contact-item a:hover{
+color:white;
+}
+
+.contact-button{
+margin-top:5px;
+}
+  
 footer{
 padding:40px 7%;
 border-top:1px solid #222;
@@ -386,6 +435,28 @@ font-size:12px;
 font-weight:normal;
 line-height:1.8;
 letter-spacing:1px;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+.contact-intro{
+font-size:15px;
+}
+
+.contact-info{
+gap:25px;
+}
+
+.contact-item a,
+.contact-item p{
+font-size:12px;
+}
+
+.contact-button{
+margin-top:0;
 }
   
 .contact{
@@ -752,20 +823,54 @@ Clear visuals.
 
 <div class="label">03 — CONTACT</div>
 
+<div class="contact-grid">
+
+<div>
+
 <h2>Let's create.</h2>
 
-<p class="contact">
+<p class="contact-intro">
+Have an idea, a project or simply want to connect?
+Let's turn it into something visual.
+</p>
 
-Email:
+</div>
+
+
+<div class="contact-info">
+
+<div class="contact-item">
+
+<span>EMAIL</span>
+
 <a href="mailto:deioces1378@gmail.com">
 deioces1378@gmail.com
 </a>
 
+</div>
+
+
+<div class="contact-item">
+
+<span>AVAILABLE FOR</span>
+
+<p>
+Graphic Design<br>
+Visual Identity<br>
+Creative Projects
 </p>
 
-<a class="button" href="mailto:deioces1378@gmail.com">
-EMAIL ME
+</div>
+
+
+<a class="button contact-button"
+href="mailto:deioces1378@gmail.com">
+START A PROJECT →
 </a>
+
+</div>
+
+</div>
 
 </section>
 
