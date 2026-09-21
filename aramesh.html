@@ -397,5 +397,17 @@ the design.
 © 2026 DEIOCES — ALL RIGHTS RESERVED
 </footer>
 
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.remove("light-mode");
+    } else {
+        document.body.classList.add("light-mode");
+    }
+});
+</script>
+    
 </body>
 </html>
