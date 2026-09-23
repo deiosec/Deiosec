@@ -1353,13 +1353,15 @@ searchInput.addEventListener("input", function() {
 
     const matches = projects.filter(function(project) {
 
-        return (
-            project.name.toLowerCase().includes(query) ||
-            project.type.toLowerCase().includes(query) ||
-            project.keywords.toLowerCase().includes(query)
-        );
+    return (
+        project.name.toLowerCase().includes(query) ||
+        project.type.toLowerCase().includes(query) ||
+        project.keywords.toLowerCase().split(" ").some(function(keyword) {
+            return keyword.startsWith(query);
+        })
+    );
 
-    });
+});
 
     if (matches.length === 0) {
 
