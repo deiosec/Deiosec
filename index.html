@@ -1255,7 +1255,6 @@ function toggleTheme() {
     }
 }
 
-
 window.addEventListener("DOMContentLoaded", function() {
 
     const savedTheme = localStorage.getItem("theme");
@@ -1269,13 +1268,11 @@ window.addEventListener("DOMContentLoaded", function() {
         themeButton.textContent = "☀";
     }
 
-
     const searchToggle = document.getElementById("searchToggle");
     const searchOverlay = document.getElementById("searchOverlay");
     const closeSearch = document.getElementById("closeSearch");
     const searchInput = document.getElementById("searchInput");
     const searchResults = document.getElementById("searchResults");
-
 
     const projects = [
         {
@@ -1316,12 +1313,14 @@ window.addEventListener("DOMContentLoaded", function() {
         }
     ];
 
+    if (!searchToggle || !searchOverlay || !closeSearch || !searchInput || !searchResults) {
+        return;
+    }
 
     searchToggle.addEventListener("click", function() {
         searchOverlay.classList.add("active");
         searchInput.focus();
     });
-
 
     closeSearch.addEventListener("click", function() {
         searchOverlay.classList.remove("active");
@@ -1329,51 +1328,38 @@ window.addEventListener("DOMContentLoaded", function() {
         searchResults.innerHTML = "";
     });
 
-
-    searchOverlay.addEventListener("click", function(event) {
-
-        if (event.target === searchOverlay) {
-            searchOverlay.classList.remove("active");
-            searchInput.value = "";
-            searchResults.innerHTML = "";
-        }
-
-    });
-
-
     searchInput.addEventListener("input", function() {
 
-        const query = searchInput.value.toLowerCase().trim();
+        const query = searchInput.value.trim().toLowerCase();
 
         searchResults.innerHTML = "";
 
-        if (!query) {
+        if (query === "") {
             return;
         }
-
 
         const matches = projects.filter(function(project) {
 
-            return (
-                project.name.toLowerCase().includes(query) ||
-                project.type.toLowerCase().includes(query) ||
-                project.keywords.toLowerCase().includes(query)
-            );
+            const searchableText = (
+                project.name + " " +
+                project.type + " " +
+                project.keywords
+            ).toLowerCase();
 
+            return searchableText.includes(query);
         });
-
 
         if (matches.length === 0) {
 
-            searchResults.innerHTML =
-                '<div class="search-result">' +
-                'NO RESULTS' +
-                '<span>Try another keyword.</span>' +
-                '</div>';
+            searchResults.innerHTML = `
+                <div class="search-result">
+                    NO RESULTS
+                    <span>Try another keyword.</span>
+                </div>
+            `;
 
             return;
         }
-
 
         matches.forEach(function(project) {
 
@@ -1382,18 +1368,23 @@ window.addEventListener("DOMContentLoaded", function() {
             result.className = "search-result";
             result.href = project.link;
 
-            result.innerHTML =
-                project.name +
-                '<span>' +
-                project.type +
-                '</span>';
+            result.innerHTML = `
+                ${project.name}
+                <span>${project.type}</span>
+            `;
 
             searchResults.appendChild(result);
-
         });
-
     });
 
+    searchOverlay.addEventListener("click", function(event) {
+
+        if (event.target === searchOverlay) {
+            searchOverlay.classList.remove("active");
+            searchInput.value = "";
+            searchResults.innerHTML = "";
+        }
+    });
 
     document.addEventListener("keydown", function(event) {
 
@@ -1402,7 +1393,6 @@ window.addEventListener("DOMContentLoaded", function() {
             searchInput.value = "";
             searchResults.innerHTML = "";
         }
-
     });
 
 });
