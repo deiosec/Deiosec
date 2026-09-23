@@ -1325,8 +1325,14 @@ window.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add("light-mode");
         button.textContent = "☀";
     }
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-    const searchToggle = document.getElementById("searchToggle");
+menuToggle.addEventListener("click", function() {
+    navMenu.classList.toggle("active");
+});
+
+const searchToggle = document.getElementById("searchToggle");
 const searchOverlay = document.getElementById("searchOverlay");
 const closeSearch = document.getElementById("closeSearch");
 const searchInput = document.getElementById("searchInput");
