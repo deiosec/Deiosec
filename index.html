@@ -276,12 +276,11 @@ padding:5px;
 
 #navMenu{
 position:fixed;
-top:80px;
+top:95px;
 left:0;
 
 width:65%;
-height:calc(100% - 80px);
-max-height:420px;
+height:330px;
 
 background:#050505;
 
@@ -290,9 +289,9 @@ flex-direction:column;
 align-items:flex-start;
 justify-content:flex-start;
 
-gap:30px;
+gap:26px;
 
-padding:100px 30px 30px;
+padding:35px 30px;
 
 transform:translateX(-100%);
 transition:transform .45s cubic-bezier(.77,0,.18,1);
@@ -300,8 +299,9 @@ transition:transform .45s cubic-bezier(.77,0,.18,1);
 z-index:9998;
 
 border-right:1px solid #222;
+border-bottom:1px solid #222;
+box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
-
 #navMenu.active{
 transform:translateX(0);
 }
