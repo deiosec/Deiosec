@@ -93,7 +93,22 @@ scroll-behavior:smooth;
     line-height: 1;
     vertical-align: middle;
 }
+#searchToggle{
+background:transparent;
+border:none;
+color:inherit;
+font-size:18px;
+padding:0;
+margin-left:10px;
+cursor:pointer;
+line-height:1;
+vertical-align:middle;
+}
 
+#searchToggle:hover{
+opacity:.6;
+}
+  
 #themeToggle:hover{
     opacity: 0.6;
 }
@@ -730,8 +745,10 @@ align-items:flex-start;
 <nav>
 <a href="#work">WORK</a>
 <a href="#about">ABOUT</a>
-<a href="#contact">CONTACT</a>
+<a href="#contact">CONTACT</a><button id="searchToggle" aria-label="Search">⌕</button>
+
 <button id="themeToggle" onclick="toggleTheme()">☀</button>
+
 </nav>
 
 </header>
