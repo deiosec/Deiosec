@@ -242,6 +242,45 @@ body.light-mode .contact-button{
     color:#000 !important;
     border-color:#ccc !important;
 }
+
+  /* MOBILE MENU */
+
+#menuToggle{
+display:none;
+background:transparent;
+border:none;
+color:inherit;
+font-size:22px;
+cursor:pointer;
+padding:0;
+}
+
+#navMenu{
+display:flex;
+align-items:center;
+}
+
+@media(max-width:600px){
+
+#menuToggle{
+display:block;
+}
+
+#navMenu{
+display:none;
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+padding-top:20px;
+width:100%;
+}
+
+#navMenu.active{
+display:flex;
+}
+
+}
+  
 /* HEADER */
 
 header{
