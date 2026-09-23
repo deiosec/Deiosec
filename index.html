@@ -1274,6 +1274,47 @@ window.addEventListener("DOMContentLoaded", function() {
     const searchOverlay = document.getElementById("searchOverlay");
     const closeSearch = document.getElementById("closeSearch");
     const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+
+
+    const projects = [
+        {
+            name: "آرامش",
+            type: "Poster Design",
+            keywords: "aramesh poster آرامش poster design",
+            link: "aramesh.html"
+        },
+        {
+            name: "DEIOCES",
+            type: "Logo Design",
+            keywords: "deioces logo visual identity logo design",
+            link: "deioces.html"
+        },
+        {
+            name: "Basketball",
+            type: "Geometric Design",
+            keywords: "basketball geometric design geometry",
+            link: "basketball.html"
+        },
+        {
+            name: "Coffee",
+            type: "Geometric Design",
+            keywords: "coffee geometric design cup",
+            link: "coffee.html"
+        },
+        {
+            name: "Music",
+            type: "Poster Design",
+            keywords: "music poster poster design",
+            link: "music.html"
+        },
+        {
+            name: "Plant Pot",
+            type: "Geometric Design",
+            keywords: "plant pot geometric design",
+            link: "plant.html"
+        }
+    ];
 
 
     searchToggle.addEventListener("click", function() {
@@ -1285,6 +1326,7 @@ window.addEventListener("DOMContentLoaded", function() {
     closeSearch.addEventListener("click", function() {
         searchOverlay.classList.remove("active");
         searchInput.value = "";
+        searchResults.innerHTML = "";
     });
 
 
@@ -1293,7 +1335,62 @@ window.addEventListener("DOMContentLoaded", function() {
         if (event.target === searchOverlay) {
             searchOverlay.classList.remove("active");
             searchInput.value = "";
+            searchResults.innerHTML = "";
         }
+
+    });
+
+
+    searchInput.addEventListener("input", function() {
+
+        const query = searchInput.value.toLowerCase().trim();
+
+        searchResults.innerHTML = "";
+
+        if (!query) {
+            return;
+        }
+
+
+        const matches = projects.filter(function(project) {
+
+            return (
+                project.name.toLowerCase().includes(query) ||
+                project.type.toLowerCase().includes(query) ||
+                project.keywords.toLowerCase().includes(query)
+            );
+
+        });
+
+
+        if (matches.length === 0) {
+
+            searchResults.innerHTML =
+                '<div class="search-result">' +
+                'NO RESULTS' +
+                '<span>Try another keyword.</span>' +
+                '</div>';
+
+            return;
+        }
+
+
+        matches.forEach(function(project) {
+
+            const result = document.createElement("a");
+
+            result.className = "search-result";
+            result.href = project.link;
+
+            result.innerHTML =
+                project.name +
+                '<span>' +
+                project.type +
+                '</span>';
+
+            searchResults.appendChild(result);
+
+        });
 
     });
 
@@ -1303,6 +1400,7 @@ window.addEventListener("DOMContentLoaded", function() {
         if (event.key === "Escape") {
             searchOverlay.classList.remove("active");
             searchInput.value = "";
+            searchResults.innerHTML = "";
         }
 
     });
@@ -1310,6 +1408,6 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
-
+  
 </body>
 </html>
