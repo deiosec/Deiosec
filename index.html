@@ -1240,6 +1240,7 @@ Graphic Design & Visual Identity.
 </footer>
 
 <script>
+
 function toggleTheme() {
     document.body.classList.toggle("light-mode");
 
@@ -1254,20 +1255,61 @@ function toggleTheme() {
     }
 }
 
+
 window.addEventListener("DOMContentLoaded", function() {
+
     const savedTheme = localStorage.getItem("theme");
-    const button = document.getElementById("themeToggle");
+    const themeButton = document.getElementById("themeToggle");
 
     if (savedTheme === "dark") {
         document.body.classList.remove("light-mode");
-        button.textContent = "☾";
+        themeButton.textContent = "☾";
     } else {
         document.body.classList.add("light-mode");
-        button.textContent = "☀";
+        themeButton.textContent = "☀";
     }
-});
-</script>
 
+
+    const searchToggle = document.getElementById("searchToggle");
+    const searchOverlay = document.getElementById("searchOverlay");
+    const closeSearch = document.getElementById("closeSearch");
+    const searchInput = document.getElementById("searchInput");
+
+
+    searchToggle.addEventListener("click", function() {
+        searchOverlay.classList.add("active");
+        searchInput.focus();
+    });
+
+
+    closeSearch.addEventListener("click", function() {
+        searchOverlay.classList.remove("active");
+        searchInput.value = "";
+    });
+
+
+    searchOverlay.addEventListener("click", function(event) {
+
+        if (event.target === searchOverlay) {
+            searchOverlay.classList.remove("active");
+            searchInput.value = "";
+        }
+
+    });
+
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+            searchOverlay.classList.remove("active");
+            searchInput.value = "";
+        }
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
