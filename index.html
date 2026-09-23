@@ -1355,10 +1355,7 @@ searchInput.addEventListener("input", function() {
 
     return (
         project.name.toLowerCase().includes(query) ||
-        project.type.toLowerCase().includes(query) ||
-        project.keywords.toLowerCase().split(" ").some(function(keyword) {
-            return keyword.startsWith(query);
-        })
+        project.type.toLowerCase().includes(query)
     );
 
 });
