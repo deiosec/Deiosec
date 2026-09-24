@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<meta name="google-site-verification" content="y5KLXW5i-KyFw4vi2dveUXJZB36At0xyQkK3nbeLgZM" />
+<meta name="google-site-verification" content="y5KLXW5i-KyFw4vi2dveUXJZB36At0xyQkK3nbeLgZM">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 <title>DEIOCES | Graphic Design & Visual Identity</title>
 
 <link rel="icon" type="image/png" href="favicon.png">
-  
+
 <meta name="description" content="DEIOCES — Graphic Design & Visual Identity.">
 
 <meta name="keywords" content="DEIOCES, graphic design, visual identity, logo design, poster design">
@@ -24,75 +24,6 @@
 
 <style>
 
-  
-body.light-mode{
-    background:#fff !important;
-    color:#050505 !important;
-}
-
-body.light-mode header{
-    background:#fff !important;
-    border-bottom:1px solid #e5e5e5 !important;
-}
-
-body.light-mode .logo{
-    color:#050505 !important;
-}
-
-body.light-mode nav a{
-    color:#777 !important;
-}
-
-body.light-mode #themeToggle{
-    color:#050505 !important;
-}
-
-body.light-mode .hero h1{
-    color:#050505 !important;
-}
-
-body.light-mode .hero p{
-    color:#777 !important;
-}
-
-body.light-mode section{
-    background:#fff !important;
-    border-top:1px solid #e5e5e5 !important;
-}
-
-body.light-mode h2{
-    color:#050505 !important;
-}
-
-body.light-mode footer{
-    background:#fff !important;
-    border-top:1px solid #e5e5e5 !important;
-}
-
-});
-  // BACK TO TOP
-const backToTop = document.getElementById("backToTop");
-
-window.addEventListener("scroll", function(){
-
-    if(window.scrollY > 400){
-        backToTop.classList.add("show");
-    }else{
-        backToTop.classList.remove("show");
-    }
-
-});
-
-backToTop.addEventListener("click", function(){
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-</script>
-  
 *{
 margin:0;
 padding:0;
@@ -103,17 +34,169 @@ html{
 scroll-behavior:smooth;
 }
 
-#themeToggle{
-    background: transparent;
-    border: none;
-    color: inherit;
-    font-size: 14px;
-    padding: 0;
-    margin-left: 10px;
-    cursor: pointer;
-    line-height: 1;
-    vertical-align: middle;
+body{
+margin:0;
 }
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode{
+background:#fff !important;
+color:#050505 !important;
+}
+
+body.light-mode header{
+background:#fff !important;
+border-bottom:1px solid #e5e5e5 !important;
+}
+
+body.light-mode .logo{
+color:#050505 !important;
+}
+
+body.light-mode nav a{
+color:#777 !important;
+}
+
+body.light-mode #themeToggle{
+color:#050505 !important;
+}
+
+body.light-mode .hero h1{
+color:#050505 !important;
+}
+
+body.light-mode .hero p{
+color:#777 !important;
+}
+
+body.light-mode section{
+background:#fff !important;
+border-top:1px solid #e5e5e5 !important;
+}
+
+body.light-mode h2{
+color:#050505 !important;
+}
+
+body.light-mode .about-intro{
+color:#050505 !important;
+}
+
+body.light-mode .about-text{
+color:#666 !important;
+}
+
+body.light-mode .contact-intro{
+color:#666 !important;
+}
+
+body.light-mode .contact-item p,
+body.light-mode .contact-item a{
+color:#666 !important;
+}
+
+body.light-mode footer{
+background:#fff !important;
+border-top:1px solid #e5e5e5 !important;
+}
+
+body.light-mode .footer-logo{
+color:#050505 !important;
+}
+
+body.light-mode .footer-left p,
+body.light-mode .footer-right{
+color:#888 !important;
+}
+
+body.light-mode .button,
+body.light-mode .contact-button{
+color:#000 !important;
+border-color:#ccc !important;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body:not(.light-mode){
+background:#050505 !important;
+color:#f5f5f5 !important;
+}
+
+body:not(.light-mode) header{
+background:#050505 !important;
+border-bottom:1px solid #222 !important;
+}
+
+body:not(.light-mode) nav a{
+color:#888 !important;
+}
+
+body:not(.light-mode) .logo,
+body:not(.light-mode) .hero h1,
+body:not(.light-mode) h2{
+color:#f5f5f5 !important;
+}
+
+body:not(.light-mode) #themeToggle{
+color:#f5f5f5 !important;
+}
+
+body:not(.light-mode) .hero p{
+color:#888 !important;
+}
+
+body:not(.light-mode) section{
+background:#050505 !important;
+border-top-color:#222 !important;
+}
+
+body:not(.light-mode) .about-intro{
+color:#f5f5f5 !important;
+}
+
+body:not(.light-mode) .about-text,
+body:not(.light-mode) .contact-intro,
+body:not(.light-mode) .contact-item p,
+body:not(.light-mode) .contact-item a{
+color:#888 !important;
+}
+
+body:not(.light-mode) footer{
+background:#050505 !important;
+border-top:1px solid #222 !important;
+}
+
+body:not(.light-mode) .footer-logo{
+color:#f5f5f5 !important;
+}
+
+
+/* =========================
+   THEME + SEARCH BUTTON
+========================= */
+
+#themeToggle{
+background:transparent;
+border:none;
+color:inherit;
+font-size:14px;
+padding:0;
+margin-left:10px;
+cursor:pointer;
+line-height:1;
+vertical-align:middle;
+}
+
+#themeToggle:hover{
+opacity:.6;
+}
+
 #searchToggle{
 background:transparent;
 border:none;
@@ -129,11 +212,13 @@ vertical-align:middle;
 #searchToggle:hover{
 opacity:.6;
 }
-  
-#themeToggle:hover{
-    opacity: 0.6;
-}
-  .contact-icon{
+
+
+/* =========================
+   CONTACT ICONS
+========================= */
+
+.contact-icon{
 width:28px;
 height:28px;
 
@@ -154,6 +239,27 @@ stroke-width:1.8;
 stroke-linecap:round;
 stroke-linejoin:round;
 }
+
+.instagram-icon{
+color:#E1306C;
+}
+
+.telegram-icon{
+color:#229ED9;
+}
+
+.email-icon{
+color:#EA4335;
+}
+
+.phone-icon{
+color:#25D366;
+}
+
+
+/* =========================
+   CONTACT MENU TEXT
+========================= */
 
 .menu-contact a{
 display:flex;
@@ -183,9 +289,15 @@ font-size:8px;
 opacity:.45;
 letter-spacing:.5px;
 }
-/* BACK TO TOP */
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
 #backToTop{
 position:fixed;
+
 right:25px;
 bottom:25px;
 
@@ -210,6 +322,7 @@ cursor:pointer;
 
 opacity:0;
 visibility:hidden;
+
 transform:translateY(15px);
 
 transition:
@@ -246,39 +359,16 @@ color:#050505;
 border-color:#20C9C3;
 }
 
-@media(max-width:600px){
-#backToTop{
-right:18px;
-bottom:18px;
-width:42px;
-height:42px;
-font-size:18px;
-}
-}
-/* BRAND COLORS */
 
-.instagram-icon{
-color:#E1306C;
-}
-
-.telegram-icon{
-color:#229ED9;
-}
-
-.email-icon{
-color:#EA4335;
-}
-
-.phone-icon{
-color:#25D366;
-}
-
-  /* DEIOCES MENU STRUCTURE */
+/* =========================
+   MENU STRUCTURE
+========================= */
 
 @media(max-width:600px){
 
 .menu-header{
 position:absolute;
+
 top:25px;
 left:25px;
 right:25px;
@@ -308,8 +398,6 @@ padding:4px;
 cursor:pointer;
 }
 
-/* SEARCH + THEME */
-
 .menu-tools{
 display:flex;
 align-items:center;
@@ -330,18 +418,15 @@ padding:4px;
 cursor:pointer;
 }
 
-/* LINE */
-
 .menu-divider{
 width:100%;
 height:1px;
+
 background:currentColor;
 opacity:.18;
 
 margin:8px 0 28px;
 }
-
-/* MAIN MENU */
 
 .menu-main{
 display:grid;
@@ -355,6 +440,7 @@ gap:15px;
 display:flex;
 flex-direction:column;
 align-items:center;
+
 gap:12px;
 
 font-size:11px;
@@ -370,8 +456,6 @@ font-size:25px;
 line-height:1;
 }
 
-/* SECONDARY */
-
 .menu-secondary{
 display:flex;
 flex-direction:column;
@@ -381,11 +465,10 @@ gap:22px;
 .menu-secondary a{
 font-size:11px;
 letter-spacing:2px;
+
 text-decoration:none;
 color:inherit;
 }
-
-/* CONTACT */
 
 .menu-contact{
 display:flex;
@@ -422,20 +505,16 @@ gap:3px;
 font-size:10px;
 font-weight:500;
 letter-spacing:1px;
-
 color:inherit;
 }
 
 .menu-contact small{
 font-size:8px;
 letter-spacing:.5px;
-
 color:inherit;
 opacity:.65;
 }
 
-/* OPEN MENU */
-
 body.menu-open .logo{
 opacity:0;
 pointer-events:none;
@@ -443,223 +522,22 @@ pointer-events:none;
 
 }
 
-/* FULLSCREEN MENU */
 
-@media(max-width:600px){
-
-/* HIDE ORIGINAL BRAND WHEN MENU IS OPEN */
-
-body.menu-open .logo{
-opacity:0;
-pointer-events:none;
-}
-
-/* MENU HEADER */
-
-.menu-header{
-position:absolute;
-
-top:25px;
-left:25px;
-right:25px;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-font-size:16px;
-letter-spacing:2px;
-font-weight:500;
-}
-
-/* CLOSE BUTTON */
-
-#closeMenu{
-background:transparent;
-border:none;
-
-color:inherit;
-
-font-size:28px;
-font-weight:300;
-
-line-height:1;
-
-padding:4px;
-
-cursor:pointer;
-}
-
-/* MENU FULL SCREEN */
-
-#navMenu{
-top:0 !important;
-left:0;
-
-width:100%;
-height:100vh;
-
-box-sizing:border-box;
-
-padding:100px 25px 30px;
-
-}
-
-/* MENU LINKS */
-
-#navMenu a,
-#navMenu button{
-position:relative;
-z-index:2;
-}
-
-/* MENU HEADER ABOVE EVERYTHING */
-
-.menu-header{
-z-index:10;
-}
-
-}
-  
-/* MANUAL LIGHT MODE */
-
-body.light-mode{
-    background:#fff !important;
-    color:#050505 !important;
-}
-
-body.light-mode header{
-    background:#fff !important;
-    border-bottom:1px solid #e5e5e5 !important;
-}
-
-body.light-mode nav a{
-    color:#777 !important;
-}
-
-body.light-mode .logo{
-    color:#050505 !important;
-}
-
-body.light-mode #themeToggle{
-    color:#050505 !important;
-}
-
-body.light-mode .hero h1{
-    color:#050505 !important;
-}
-
-body.light-mode .hero p{
-    color:#777 !important;
-}
-
-body.light-mode section{
-    border-top-color:#e5e5e5 !important;
-}
-
-body.light-mode h2{
-    color:#050505 !important;
-}
-
-body.light-mode .about-intro{
-    color:#050505 !important;
-}
-
-body.light-mode .about-text{
-    color:#666 !important;
-}
-
-body.light-mode .contact-intro{
-    color:#666 !important;
-}
-
-body.light-mode .contact-item p,
-body.light-mode .contact-item a{
-    color:#666 !important;
-}
-
-body.light-mode footer{
-    background:#fff !important;
-    border-top:1px solid #e5e5e5 !important;
-}
-
-body.light-mode .footer-logo{
-    color:#050505 !important;
-}
-
-body.light-mode .footer-left p,
-body.light-mode .footer-right{
-    color:#888 !important;
-}
-
- body:not(.light-mode){
-    background:#050505 !important;
-    color:#f5f5f5 !important;
-}
-
-body:not(.light-mode) header{
-    background:#050505 !important;
-    border-bottom:1px solid #222 !important;
-}
-
-body:not(.light-mode) nav a{
-    color:#888 !important;
-}
-
-body:not(.light-mode) .logo,
-body:not(.light-mode) .hero h1,
-body:not(.light-mode) h2{
-    color:#f5f5f5 !important;
-}
-
-body:not(.light-mode) #themeToggle{
-    color:#f5f5f5 !important;
-}
-
-body:not(.light-mode) .hero p{
-    color:#888 !important;
-}
-
-body:not(.light-mode) section{
-    background:#050505 !important;
-    border-top-color:#222 !important;
-}
-
-body:not(.light-mode) .about-intro{
-    color:#f5f5f5 !important;
-}
-
-body:not(.light-mode) .about-text,
-body:not(.light-mode) .contact-intro,
-body:not(.light-mode) .contact-item p,
-body:not(.light-mode) .contact-item a{
-    color:#888 !important;
-}
-
-body:not(.light-mode) footer{
-    background:#050505 !important;
-    border-top:1px solid #222 !important;
-}
-
-body:not(.light-mode) .footer-logo{
-    color:#f5f5f5 !important;
-} 
-
-  body.light-mode .button,
-body.light-mode .contact-button{
-    color:#000 !important;
-    border-color:#ccc !important;
-}
-
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 #menuToggle{
 display:none;
+
 background:transparent;
 border:none;
+
 color:inherit;
+
 font-size:22px;
 cursor:pointer;
+
 padding:0;
 }
 
@@ -672,6 +550,7 @@ align-items:center;
 
 #menuToggle{
 display:block;
+
 position:relative;
 z-index:10000;
 
@@ -685,7 +564,6 @@ cursor:pointer;
 
 padding:5px;
 }
-/* SLIDE MENU */
 
 #navMenu{
 position:fixed;
@@ -720,8 +598,6 @@ transition:transform .45s cubic-bezier(.77,0,.18,1);
 z-index:9998;
 }
 
-/* DARK MODE */
-
 body:not(.light-mode) #navMenu{
 background:#050505;
 color:#f5f5f5;
@@ -729,8 +605,6 @@ color:#f5f5f5;
 border-right-color:#222;
 border-bottom-color:#222;
 }
-
-/* LIGHT MODE */
 
 body.light-mode #navMenu{
 background:#fff;
@@ -748,13 +622,9 @@ body.light-mode #navMenu button{
 color:#050505;
 }
 
-/* OPEN */
-
 #navMenu.active{
 transform:translateX(0);
 }
-
-/* MENU ITEMS */
 
 #navMenu a,
 #navMenu button{
@@ -772,8 +642,6 @@ transform .35s ease;
 opacity:1;
 transform:translateX(0);
 }
-
-/* ITEM DELAYS */
 
 #navMenu.active a:nth-child(1){
 transition-delay:.08s;
@@ -796,15 +664,89 @@ transition-delay:.32s;
 }
 
 }
-  
-/* HEADER */
 
-header{
-height:80px;
+
+/* =========================
+   FULLSCREEN MENU
+========================= */
+
+@media(max-width:600px){
+
+body.menu-open .logo{
+opacity:0;
+pointer-events:none;
+}
+
+.menu-header{
+position:absolute;
+
+top:25px;
+left:25px;
+right:25px;
+
 display:flex;
 align-items:center;
 justify-content:space-between;
+
+font-size:16px;
+letter-spacing:2px;
+font-weight:500;
+}
+
+#closeMenu{
+background:transparent;
+border:none;
+
+color:inherit;
+
+font-size:28px;
+font-weight:300;
+
+line-height:1;
+
+padding:4px;
+
+cursor:pointer;
+}
+
+#navMenu{
+top:0 !important;
+left:0;
+
+width:100%;
+height:100vh;
+
+box-sizing:border-box;
+
+padding:100px 25px 30px;
+}
+
+#navMenu a,
+#navMenu button{
+position:relative;
+z-index:2;
+}
+
+.menu-header{
+z-index:10;
+}
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+height:80px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
 padding:0 7%;
+
 border-bottom:1px solid #222;
 }
 
@@ -816,9 +758,12 @@ letter-spacing:5px;
 
 nav a{
 color:#888;
+
 text-decoration:none;
+
 font-size:11px;
 letter-spacing:2px;
+
 margin-left:22px;
 }
 
@@ -826,16 +771,23 @@ nav a:hover{
 color:white;
 }
 
-/* SEARCH OVERLAY */
+
+/* =========================
+   SEARCH OVERLAY
+========================= */
 
 #searchOverlay{
 position:fixed;
 inset:0;
+
 background:rgba(5,5,5,.96);
+
 display:none;
 align-items:flex-start;
 justify-content:center;
+
 padding:120px 7%;
+
 z-index:9999;
 }
 
@@ -851,32 +803,45 @@ position:relative;
 
 #closeSearch{
 position:absolute;
+
 right:0;
 top:-45px;
+
 background:none;
 border:none;
+
 color:#f5f5f5;
+
 font-size:28px;
 font-weight:300;
+
 cursor:pointer;
 }
 
 .search-label{
 font-size:10px;
 letter-spacing:4px;
+
 color:#555;
+
 margin-bottom:20px;
 }
 
 #searchInput{
 width:100%;
+
 background:transparent;
 border:none;
 border-bottom:1px solid #333;
+
 outline:none;
+
 color:#f5f5f5;
+
 font-size:38px;
+
 padding:15px 0;
+
 font-family:inherit;
 }
 
@@ -890,26 +855,36 @@ border-bottom-color:#20C9C3;
 
 #searchResults{
 margin-top:30px;
+
 display:flex;
 flex-direction:column;
+
 gap:10px;
 }
 
 .search-result{
 display:block;
+
 padding:16px 0;
+
 border-bottom:1px solid #222;
+
 color:#f5f5f5;
+
 text-decoration:none;
+
 font-size:13px;
 letter-spacing:1px;
 }
 
 .search-result span{
 display:block;
+
 font-size:9px;
 letter-spacing:3px;
+
 color:#555;
+
 margin-top:6px;
 }
 
@@ -917,53 +892,52 @@ margin-top:6px;
 color:#20C9C3;
 }
 
-@media(max-width:600px){
 
-#searchOverlay{
-padding:100px 7%;
-}
-
-#searchInput{
-font-size:26px;
-}
-
-#closeSearch{
-top:-40px;
-font-size:25px;
-}
-
-       }
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
 min-height:85vh;
+
 display:flex;
 flex-direction:column;
 justify-content:center;
+
 padding:0 7%;
 }
 
 .hero h1{
 font-size:clamp(65px,16vw,180px);
+
 letter-spacing:-7px;
 line-height:.85;
 }
 
 .hero p{
 margin-top:30px;
+
 color:#888;
+
 font-size:15px;
 }
 
 .button{
 display:inline-block;
+
 margin-top:35px;
+
 padding:14px 25px;
+
 border:1px solid #444;
+
 color:white;
+
 text-decoration:none;
+
 font-size:11px;
 letter-spacing:2px;
+
 width:max-content;
 }
 
@@ -973,17 +947,22 @@ color:black;
 }
 
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
 padding:110px 7%;
+
 border-top:1px solid #222;
 }
 
 .label{
 font-size:10px;
 letter-spacing:4px;
+
 color:#555;
+
 margin-bottom:25px;
 }
 
@@ -993,32 +972,36 @@ margin-bottom:30px;
 }
 
 
-/* ABOUT */
-
-.about{
-max-width:600px;
-color:#888;
-font-size:18px;
-line-height:1.8;
-}
-
-
-/* WORK */
+/* =========================
+   WORK
+========================= */
 
 .work{
 min-height:280px;
+
 background:#20C9C3;
+
 border:1px solid #20C9C3;
+
 display:flex;
 align-items:center;
+
 gap:30px;
+
 color:#000;
+
 letter-spacing:2px;
 font-size:11px;
+
 overflow:hidden;
+
 margin-bottom:20px;
+
 padding:15px;
-transition:transform .3s ease,border-color .3s ease;
+
+transition:
+transform .3s ease,
+border-color .3s ease;
 }
 
 .work:hover{
@@ -1029,8 +1012,11 @@ border-color:#000;
 .work img{
 width:200px;
 height:240px;
+
 object-fit:cover;
+
 border:1px solid #222;
+
 transition:transform .3s ease;
 }
 
@@ -1040,7 +1026,9 @@ transform:scale(1.04);
 
 .work h3{
 font-size:18px;
+
 margin-bottom:10px;
+
 letter-spacing:1px;
 }
 
@@ -1051,13 +1039,20 @@ font-size:11px;
 
 .project-link{
 display:inline-block;
+
 margin-top:15px;
+
 color:#000;
+
 text-decoration:none;
+
 font-size:10px;
 font-weight:bold;
+
 letter-spacing:2px;
+
 border-bottom:1px solid #000;
+
 padding-bottom:3px;
 }
 
@@ -1081,13 +1076,19 @@ font-weight:bold;
 }
 
 
-/* ABOUT GRID */
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
 display:grid;
+
 grid-template-columns:2fr 1fr;
+
 gap:100px;
+
 max-width:1100px;
+
 align-items:start;
 }
 
@@ -1097,47 +1098,68 @@ max-width:680px;
 
 .about-intro{
 font-size:30px;
+
 line-height:1.45;
+
 color:#f5f5f5;
+
 margin-bottom:32px;
+
 letter-spacing:-0.3px;
 }
 
 .about-text{
 font-size:16px;
+
 line-height:1.9;
+
 color:#888;
+
 max-width:620px;
 }
 
 .about-side{
 display:flex;
+
 flex-direction:column;
+
 gap:42px;
 }
 
 .about-item{
 padding-top:20px;
+
 border-top:1px solid #222;
 }
 
 .about-item span{
 display:block;
+
 font-size:9px;
+
 letter-spacing:3px;
+
 color:#555;
+
 margin-bottom:14px;
 }
 
 .about-item strong{
 font-size:12px;
+
 font-weight:normal;
+
 line-height:2;
+
 letter-spacing:1px;
+
 color:#ccc;
 }
 
-/* CONTACT */
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
 color:#888;
@@ -1145,6 +1167,7 @@ color:#888;
 
 .contact a{
 color:#20C9C3;
+
 text-decoration:none;
 }
 
@@ -1154,42 +1177,58 @@ color:white;
 
 .contact-grid{
 display:grid;
+
 grid-template-columns:1.5fr 1fr;
+
 gap:100px;
+
 max-width:1000px;
 }
 
 .contact-intro{
 max-width:500px;
+
 color:#888;
+
 font-size:17px;
+
 line-height:1.8;
 }
 
 .contact-info{
 display:flex;
+
 flex-direction:column;
+
 gap:35px;
 }
 
 .contact-item{
 padding-top:18px;
+
 border-top:1px solid #222;
 }
 
 .contact-item span{
 display:block;
+
 font-size:9px;
+
 letter-spacing:3px;
+
 color:#555;
+
 margin-bottom:12px;
 }
 
 .contact-item a,
 .contact-item p{
 color:#888;
+
 text-decoration:none;
+
 font-size:13px;
+
 line-height:1.8;
 }
 
@@ -1202,51 +1241,78 @@ margin-top:5px;
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 padding:50px 7%;
+
 border-top:1px solid #222;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:flex-end;
+
 gap:30px;
+
 color:#444;
+
 font-size:10px;
+
 letter-spacing:2px;
 }
 
 .footer-logo{
 color:#f5f5f5;
+
 font-size:16px;
+
 font-weight:bold;
+
 letter-spacing:5px;
+
 margin-bottom:12px;
 }
 
 .footer-left p{
 font-size:9px;
+
 color:#555;
+
 letter-spacing:2px;
 }
 
 .footer-right{
 display:flex;
+
 flex-direction:column;
+
 align-items:flex-end;
+
 gap:8px;
+
 font-size:9px;
 }
-  
-/* MOBILE */
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
 header{
 height:auto;
+
 padding:22px 7%;
+
 flex-direction:column;
+
 align-items:flex-start;
+
 gap:18px;
 }
 
@@ -1266,17 +1332,21 @@ font-size:9px;
 
 .hero{
 min-height:75vh;
+
 padding:0 7%;
 }
 
 .hero h1{
 font-size:clamp(55px,18vw,100px);
+
 letter-spacing:-4px;
 }
 
 .hero p{
 font-size:13px;
+
 line-height:1.6;
+
 max-width:280px;
 }
 
@@ -1290,17 +1360,25 @@ font-size:36px;
 
 .work{
 min-height:auto;
+
 display:flex;
+
 flex-direction:column;
+
 align-items:flex-start;
+
 gap:20px;
+
 padding:15px;
 }
 
 .work img{
 width:100%;
+
 height:auto;
+
 max-height:320px;
+
 object-fit:cover;
 }
 
@@ -1314,6 +1392,7 @@ font-size:18px;
 
 .work p{
 font-size:11px;
+
 line-height:1.6;
 }
 
@@ -1323,11 +1402,13 @@ margin-top:18px;
 
 .project-details p{
 font-size:10px;
+
 line-height:1.6;
 }
 
 .project-link{
 margin-top:12px;
+
 font-size:10px;
 }
 
@@ -1338,6 +1419,7 @@ line-height:1.8;
 
 .about-grid{
 grid-template-columns:1fr;
+
 gap:50px;
 }
 
@@ -1355,6 +1437,7 @@ gap:25px;
 
 .contact-grid{
 grid-template-columns:1fr;
+
 gap:50px;
 }
 
@@ -1381,8 +1464,11 @@ font-size:14px;
 
 footer{
 padding:35px 7%;
+
 flex-direction:column;
+
 align-items:flex-start;
+
 gap:25px;
 }
 
@@ -1390,11 +1476,43 @@ gap:25px;
 align-items:flex-start;
 }
 
+
+/* BACK TO TOP MOBILE */
+
+#backToTop{
+right:18px;
+bottom:18px;
+
+width:42px;
+height:42px;
+
+font-size:18px;
 }
+
+#searchOverlay{
+padding:100px 7%;
+}
+
+#searchInput{
+font-size:26px;
+}
+
+#closeSearch{
+top:-40px;
+font-size:25px;
+}
+
+}
+
+
+/* =========================
+   HEADER END
+========================= */
 
 </style>
 
 </head>
+
 
 <body class="light-mode">
 
@@ -1410,10 +1528,13 @@ align-items:flex-start;
 <div id="navMenu">
 
 <div class="menu-header">
+
 <span>DEIOCES</span>
 
 <button id="closeMenu" aria-label="Close Menu">×</button>
+
 </div>
+
 
 <div class="menu-tools">
 
@@ -1423,7 +1544,9 @@ align-items:flex-start;
 
 </div>
 
+
 <div class="menu-divider"></div>
+
 
 <div class="menu-main">
 
@@ -1444,7 +1567,9 @@ CONTACT
 
 </div>
 
+
 <div class="menu-divider"></div>
+
 
 <div class="menu-secondary">
 
@@ -1456,23 +1581,34 @@ CONTACT
 
 </div>
 
+
 <div class="menu-divider"></div>
+
 
 <div class="menu-contact">
 
 <a href="https://www.instagram.com/thedeioces" target="_blank" rel="noopener">
 
 <span class="contact-icon instagram-icon">
+
 <svg viewBox="0 0 24 24" aria-hidden="true">
+
 <rect x="3" y="3" width="18" height="18" rx="5"/>
+
 <circle cx="12" cy="12" r="4"/>
+
 <circle cx="17.5" cy="6.5" r="1"/>
+
 </svg>
+
 </span>
 
 <span>
+
 <strong>Instagram</strong>
+
 <small>@thedeioces</small>
+
 </span>
 
 </a>
@@ -1481,15 +1617,23 @@ CONTACT
 <a href="https://t.me/Deioces_support" target="_blank" rel="noopener">
 
 <span class="contact-icon telegram-icon">
+
 <svg viewBox="0 0 24 24" aria-hidden="true">
+
 <path d="M21 4L3 11.2l6.2 2.1L11.5 20l3.2-4.2L19 19l2-15z"/>
+
 <path d="M9.2 13.3L19 7l-5.7 7.1"/>
+
 </svg>
+
 </span>
 
 <span>
+
 <strong>Telegram</strong>
+
 <small>@Deioces_support</small>
+
 </span>
 
 </a>
@@ -1498,15 +1642,23 @@ CONTACT
 <a href="mailto:deioces1378@gmail.com">
 
 <span class="contact-icon email-icon">
+
 <svg viewBox="0 0 24 24" aria-hidden="true">
+
 <rect x="3" y="5" width="18" height="14" rx="2"/>
+
 <path d="M4 7l8 6 8-6"/>
+
 </svg>
+
 </span>
 
 <span>
+
 <strong>Email</strong>
+
 <small>deioces1378@gmail.com</small>
+
 </span>
 
 </a>
@@ -1515,14 +1667,21 @@ CONTACT
 <a href="tel:09195626536">
 
 <span class="contact-icon phone-icon">
+
 <svg viewBox="0 0 24 24" aria-hidden="true">
+
 <path d="M7 3l3 1-1.5 4-2-.5c1 2.8 3.2 5 6 6l-.5-2 4-1.5 1 3c.5 1.5-.3 3.2-1.8 3.8C9 20.2 3.8 15 5.2 8.8 5.6 7.3 5.5 4.5 7 3z"/>
+
 </svg>
+
 </span>
 
 <span>
+
 <strong>Phone</strong>
+
 <small>09195626536</small>
+
 </span>
 
 </a>
@@ -1531,14 +1690,21 @@ CONTACT
 <a href="tel:09015626536">
 
 <span class="contact-icon phone-icon">
+
 <svg viewBox="0 0 24 24" aria-hidden="true">
+
 <path d="M7 3l3 1-1.5 4-2-.5c1 2.8 3.2 5 6 6l-.5-2 4-1.5 1 3c.5 1.5-.3 3.2-1.8 3.8C9 20.2 3.8 15 5.2 8.8 5.6 7.3 5.5 4.5 7 3z"/>
+
 </svg>
+
 </span>
 
 <span>
+
 <strong>Phone 02</strong>
+
 <small>09015626536</small>
+
 </span>
 
 </a>
@@ -1550,27 +1716,33 @@ CONTACT
 </nav>
 
 </header>
-  
+
+
+<!-- SEARCH -->
+
 <div id="searchOverlay">
 
-    <div class="search-box">
+<div class="search-box">
 
-        <button id="closeSearch" aria-label="Close Search">×</button>
+<button id="closeSearch" aria-label="Close Search">×</button>
 
-        <div class="search-label">SEARCH DEIOCES</div>
+<div class="search-label">SEARCH DEIOCES</div>
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search projects..."
-            autocomplete="off"
-        >
+<input
+type="text"
+id="searchInput"
+placeholder="Search projects..."
+autocomplete="off"
+>
 
-        <div id="searchResults"></div>
-
-    </div>
+<div id="searchResults"></div>
 
 </div>
+
+</div>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1583,14 +1755,14 @@ CONTACT
 </section>
 
 
+<!-- WORK -->
+
 <section id="work">
 
 <div class="label">01 — WORK</div>
 
 <h2>Portfolio</h2>
 
-
-<!-- ARAMESH -->
 
 <div class="work project-card">
 
@@ -1630,8 +1802,6 @@ Poster Design
 </div>
 
 
-<!-- DEIOCES LOGO -->
-
 <div class="work project-card">
 
 <img src="deiosec-logo.png" alt="DEIOCES Logo">
@@ -1669,8 +1839,6 @@ Logo Design
 
 </div>
 
-
-<!-- BASKETBALL -->
 
 <div class="work project-card">
 
@@ -1710,8 +1878,6 @@ Geometric Design
 </div>
 
 
-<!-- COFFEE -->
-
 <div class="work project-card">
 
 <img src="coffee.jpg" alt="Coffee Cup Geometric Design">
@@ -1750,8 +1916,6 @@ Geometric Design
 </div>
 
 
-<!-- MUSIC -->
-
 <div class="work project-card">
 
 <img src="music.jpg" alt="Music Poster Design">
@@ -1789,8 +1953,6 @@ Poster Design
 
 </div>
 
-
-<!-- PLANT POT -->
 
 <div class="work project-card">
 
@@ -1832,35 +1994,79 @@ Geometric Design
 </section>
 
 
-<section id="about"><div class="label">02 — ABOUT</div><h2>Design with purpose.</h2><div class="about-grid"><div class="about-main"><p class="about-intro">
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="label">02 — ABOUT</div>
+
+<h2>Design with purpose.</h2>
+
+<div class="about-grid">
+
+<div class="about-main">
+
+<p class="about-intro">
 DEIOCES is a personal graphic design practice focused on
 creating simple, distinctive and purposeful visual identities.
-</p><p class="about-text">
+</p>
+
+<p class="about-text">
 From posters and logos to geometric compositions and digital
 visuals, each project explores shape, balance, typography
 and visual identity through a clean and intentional approach.
-</p></div><div class="about-side"><div class="about-item">
+</p>
+
+</div>
+
+
+<div class="about-side">
+
+<div class="about-item">
+
 <span>FOCUS</span>
+
 <strong>
 Graphic Design<br>
 Visual Identity<br>
 Poster & Logo Design
 </strong>
-</div><div class="about-item">
+
+</div>
+
+
+<div class="about-item">
+
 <span>TOOLS</span>
+
 <strong>
 Canva<br>
 HTML & CSS
 </strong>
-</div><div class="about-item">
+
+</div>
+
+
+<div class="about-item">
+
 <span>APPROACH</span>
+
 <strong>
 Simple ideas.<br>
 Clear visuals.<br>
 Intentional design.
 </strong>
-</div></div></div></section>
 
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -1918,6 +2124,8 @@ START A PROJECT →
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
 <div class="footer-left">
@@ -1941,218 +2149,367 @@ Graphic Design & Visual Identity.
 
 </footer>
 
+
+<!-- BACK TO TOP -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-function toggleTheme() {
-    document.body.classList.toggle("light-mode");
+function toggleTheme(){
 
-    const button = document.getElementById("themeToggle");
+document.body.classList.toggle("light-mode");
 
-    if (document.body.classList.contains("light-mode")) {
-        button.textContent = "☀";
-        localStorage.setItem("theme", "light");
-    } else {
-        button.textContent = "☾";
-        localStorage.setItem("theme", "dark");
-    }
+const button =
+document.getElementById("themeToggle");
+
+if(document.body.classList.contains("light-mode")){
+
+button.textContent="☀";
+
+localStorage.setItem("theme","light");
+
+}else{
+
+button.textContent="☾";
+
+localStorage.setItem("theme","dark");
+
 }
 
-window.addEventListener("DOMContentLoaded", function() {
+}
 
-    const savedTheme = localStorage.getItem("theme");
-    const button = document.getElementById("themeToggle");
 
-    if (savedTheme === "dark") {
-        document.body.classList.remove("light-mode");
-        button.textContent = "☾";
-    } else {
-        document.body.classList.add("light-mode");
-        button.textContent = "☀";
-    }
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-const closeMenu = document.getElementById("closeMenu");
+window.addEventListener("DOMContentLoaded",function(){
+
+/* =========================
+   THEME
+========================= */
+
+const savedTheme =
+localStorage.getItem("theme");
+
+const themeButton =
+document.getElementById("themeToggle");
+
+if(savedTheme==="dark"){
+
+document.body.classList.remove("light-mode");
+
+themeButton.textContent="☾";
+
+}else{
+
+document.body.classList.add("light-mode");
+
+themeButton.textContent="☀";
+
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navMenu =
+document.getElementById("navMenu");
+
+const closeMenu =
+document.getElementById("closeMenu");
+
 
 function openMenu(){
 
-    navMenu.classList.add("active");
-    document.body.classList.add("menu-open");
+navMenu.classList.add("active");
 
-    menuToggle.style.opacity = "0";
-    menuToggle.style.pointerEvents = "none";
+document.body.classList.add("menu-open");
+
+menuToggle.style.opacity="0";
+
+menuToggle.style.pointerEvents="none";
 
 }
+
 
 function closeMenuFunction(){
 
-    navMenu.classList.remove("active");
-    document.body.classList.remove("menu-open");
+navMenu.classList.remove("active");
 
-    menuToggle.style.opacity = "1";
-    menuToggle.style.pointerEvents = "auto";
+document.body.classList.remove("menu-open");
+
+menuToggle.style.opacity="1";
+
+menuToggle.style.pointerEvents="auto";
 
 }
 
-menuToggle.addEventListener("click", function(){
 
-    openMenu();
+menuToggle.addEventListener("click",function(){
 
-});
-
-closeMenu.addEventListener("click", function(){
-
-    closeMenuFunction();
+openMenu();
 
 });
 
-navMenu.addEventListener("click", function(event){
 
-    if(event.target.closest("a")){
+closeMenu.addEventListener("click",function(){
 
-        closeMenuFunction();
-
-    }
+closeMenuFunction();
 
 });
 
-document.addEventListener("click", function(event){
 
-    if(
-        navMenu.classList.contains("active") &&
-        !navMenu.contains(event.target) &&
-        !menuToggle.contains(event.target)
-    ){
+navMenu.addEventListener("click",function(event){
 
-        closeMenuFunction();
+if(event.target.closest("a")){
 
-    }
+closeMenuFunction();
+
+}
 
 });
 
-const searchToggle = document.getElementById("searchToggle");
-const searchOverlay = document.getElementById("searchOverlay");
-const closeSearch = document.getElementById("closeSearch");
-const searchInput = document.getElementById("searchInput");
-const searchResults = document.getElementById("searchResults");
-    searchToggle.addEventListener("click", function() {
-        searchOverlay.classList.add("active");
-        searchInput.focus();
-    });
 
-    closeSearch.addEventListener("click", function() {
-        searchOverlay.classList.remove("active");
-        searchInput.value = "";
-    });
+document.addEventListener("click",function(event){
 
-    searchOverlay.addEventListener("click", function(event) {
+if(
+navMenu.classList.contains("active") &&
+!navMenu.contains(event.target) &&
+!menuToggle.contains(event.target)
+){
 
-        if (event.target === searchOverlay) {
-            searchOverlay.classList.remove("active");
-            searchInput.value = "";
-        }
+closeMenuFunction();
 
-    });
-const projects = [
-    {
-        name: "آرامش",
-        type: "Poster Design",
-        keywords: "آرامش poster calm minimal",
-        link: "aramesh.html"
-    },
-    {
-        name: "DEIOCES",
-        type: "Logo Design",
-        keywords: "logo identity branding",
-        link: "deioces.html"
-    },
-    {
-        name: "Basketball",
-        type: "Geometric Design",
-        keywords: "basketball geometric shapes",
-        link: "basketball.html"
-    },
-    {
-        name: "Coffee",
-        type: "Geometric Design",
-        keywords: "coffee cup geometric shapes",
-        link: "coffee.html"
-    },
-    {
-        name: "Music",
-        type: "Poster Design",
-        keywords: "music poster headphones",
-        link: "music.html"
-    },
-    {
-        name: "Plant Pot",
-        type: "Geometric Design",
-        keywords: "plant pot geometric shapes",
-        link: "plant.html"
-    }
+}
+
+});
+
+
+/* =========================
+   SEARCH
+========================= */
+
+const searchToggle =
+document.getElementById("searchToggle");
+
+const searchOverlay =
+document.getElementById("searchOverlay");
+
+const closeSearch =
+document.getElementById("closeSearch");
+
+const searchInput =
+document.getElementById("searchInput");
+
+const searchResults =
+document.getElementById("searchResults");
+
+
+searchToggle.addEventListener("click",function(){
+
+searchOverlay.classList.add("active");
+
+searchInput.focus();
+
+});
+
+
+closeSearch.addEventListener("click",function(){
+
+searchOverlay.classList.remove("active");
+
+searchInput.value="";
+
+});
+
+
+searchOverlay.addEventListener("click",function(event){
+
+if(event.target===searchOverlay){
+
+searchOverlay.classList.remove("active");
+
+searchInput.value="";
+
+}
+
+});
+
+
+/* =========================
+   PROJECT SEARCH
+========================= */
+
+const projects=[
+
+{
+name:"آرامش",
+type:"Poster Design",
+keywords:"آرامش poster calm minimal",
+link:"aramesh.html"
+},
+
+{
+name:"DEIOCES",
+type:"Logo Design",
+keywords:"logo identity branding",
+link:"deioces.html"
+},
+
+{
+name:"Basketball",
+type:"Geometric Design",
+keywords:"basketball geometric shapes",
+link:"basketball.html"
+},
+
+{
+name:"Coffee",
+type:"Geometric Design",
+keywords:"coffee cup geometric shapes",
+link:"coffee.html"
+},
+
+{
+name:"Music",
+type:"Poster Design",
+keywords:"music poster headphones",
+link:"music.html"
+},
+
+{
+name:"Plant Pot",
+type:"Geometric Design",
+keywords:"plant pot geometric shapes",
+link:"plant.html"
+}
+
 ];
 
 
-searchInput.addEventListener("input", function() {
+searchInput.addEventListener("input",function(){
 
-    const query = searchInput.value.toLowerCase().trim();
+const query =
+searchInput.value.toLowerCase().trim();
 
-    searchResults.innerHTML = "";
+searchResults.innerHTML="";
 
-    if (!query) {
-        return;
-    }
+if(!query){
 
-    const matches = projects.filter(function(project) {
+return;
 
-    return (
-        project.name.toLowerCase().includes(query) ||
-        project.type.toLowerCase().includes(query)
-    );
+}
+
+
+const matches =
+projects.filter(function(project){
+
+return(
+project.name.toLowerCase().includes(query) ||
+project.type.toLowerCase().includes(query)
+);
+
+});
+
+
+if(matches.length===0){
+
+searchResults.innerHTML=
+'<div class="search-result">'+
+'NO RESULTS'+
+'<span>Try another keyword.</span>'+
+'</div>';
+
+return;
+
+}
+
+
+matches.forEach(function(project){
+
+const result =
+document.createElement("a");
+
+result.className="search-result";
+
+result.href=project.link;
+
+result.innerHTML=
+project.name+
+'<span>'+
+project.type+
+'</span>';
+
+searchResults.appendChild(result);
 
 });
 
-    if (matches.length === 0) {
+});
 
-        searchResults.innerHTML =
-            '<div class="search-result">' +
-            'NO RESULTS' +
-            '<span>Try another keyword.</span>' +
-            '</div>';
 
-        return;
-    }
+/* =========================
+   ESCAPE SEARCH
+========================= */
 
-    matches.forEach(function(project) {
+document.addEventListener("keydown",function(event){
 
-        const result = document.createElement("a");
+if(event.key==="Escape"){
 
-        result.className = "search-result";
-        result.href = project.link;
+searchOverlay.classList.remove("active");
 
-        result.innerHTML =
-            project.name +
-            '<span>' +
-            project.type +
-            '</span>';
+searchInput.value="";
 
-        searchResults.appendChild(result);
-
-    });
+}
 
 });
-    document.addEventListener("keydown", function(event) {
 
-        if (event.key === "Escape") {
-            searchOverlay.classList.remove("active");
-            searchInput.value = "";
-        }
 
-    });
+/* =========================
+   BACK TO TOP
+========================= */
+
+const backToTop =
+document.getElementById("backToTop");
+
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>400){
+
+backToTop.classList.add("show");
+
+}else{
+
+backToTop.classList.remove("show");
+
+}
+
+});
+
+
+backToTop.addEventListener("click",function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
 
 });
 
 </script>
-  <!-- BACK TO TOP -->
-<button id="backToTop" aria-label="Back to top">↑</button>
+
+
 </body>
 </html>
