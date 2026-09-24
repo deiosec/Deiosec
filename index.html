@@ -113,6 +113,84 @@ opacity:.6;
     opacity: 0.6;
 }
 
+/* FULLSCREEN MENU */
+
+@media(max-width:600px){
+
+/* HIDE ORIGINAL BRAND WHEN MENU IS OPEN */
+
+body.menu-open .logo{
+opacity:0;
+pointer-events:none;
+}
+
+/* MENU HEADER */
+
+.menu-header{
+position:absolute;
+
+top:25px;
+left:25px;
+right:25px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+font-size:16px;
+letter-spacing:2px;
+font-weight:500;
+}
+
+/* CLOSE BUTTON */
+
+#closeMenu{
+background:transparent;
+border:none;
+
+color:inherit;
+
+font-size:28px;
+font-weight:300;
+
+line-height:1;
+
+padding:4px;
+
+cursor:pointer;
+}
+
+/* MENU FULL SCREEN */
+
+#navMenu{
+top:0 !important;
+left:0;
+
+width:100%;
+height:100vh;
+
+box-sizing:border-box;
+
+padding:100px 25px 30px;
+
+}
+
+/* MENU LINKS */
+
+#navMenu a,
+#navMenu button{
+position:relative;
+z-index:2;
+}
+
+/* MENU HEADER ABOVE EVERYTHING */
+
+.menu-header{
+z-index:10;
+}
+
+}
+  
 /* MANUAL LIGHT MODE */
 
 body.light-mode{
@@ -1001,6 +1079,11 @@ align-items:flex-start;
 
 <div id="navMenu">
 
+<div class="menu-header">
+<span>DEIOCES</span>
+<button id="closeMenu" aria-label="Close Menu">×</button>
+</div>
+
 <a href="#work">WORK</a>
 <a href="#about">ABOUT</a>
 <a href="#contact">CONTACT</a>
@@ -1435,17 +1518,74 @@ window.addEventListener("DOMContentLoaded", function() {
     }
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
+const closeMenu = document.getElementById("closeMenu");
 
-menuToggle.addEventListener("click", function() {
+function openMenu(){
 
-    navMenu.classList.toggle("active");
+    navMenu.classList.add("active");
+    document.body.classList.add("menu-open");
 
-    if (navMenu.classList.contains("active")) {
-        menuToggle.textContent = "×";
-        menuToggle.setAttribute("aria-label", "Close Menu");
-    } else {
-        menuToggle.textContent = "☰";
-        menuToggle.setAttribute("aria-label", "Open Menu");
+    menuToggle.style.opacity = "0";
+    menuToggle.style.pointerEvents = "none";
+
+}
+
+function closeMenuFunction(){
+
+    navMenu.classList.remove("active");
+    document.body.classList.remove("menu-open");
+
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-label", "Open Menu");
+
+    menuToggle.style.opacity = "1";
+    menuToggle.style.pointerEvents = "auto";
+
+}
+
+menuToggle.addEventListener("click", function(){
+
+    if(navMenu.classList.contains("active")){
+
+        closeMenuFunction();
+
+    }else{
+
+        openMenu();
+
+    }
+
+});
+
+
+closeMenu.addEventListener("click", function(){
+
+    closeMenuFunction();
+
+});
+
+
+navMenu.addEventListener("click", function(event){
+
+    if(event.target.tagName === "A"){
+
+        closeMenuFunction();
+
+    }
+
+});
+
+
+document.addEventListener("click", function(event){
+
+    if(
+        navMenu.classList.contains("active") &&
+        !navMenu.contains(event.target) &&
+        !menuToggle.contains(event.target)
+    ){
+
+        closeMenuFunction();
+
     }
 
 });
