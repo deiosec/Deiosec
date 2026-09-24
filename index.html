@@ -70,6 +70,27 @@ body.light-mode footer{
 }
 
 });
+  // BACK TO TOP
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function(){
+
+    if(window.scrollY > 400){
+        backToTop.classList.add("show");
+    }else{
+        backToTop.classList.remove("show");
+    }
+
+});
+
+backToTop.addEventListener("click", function(){
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
 </script>
   
 *{
@@ -162,7 +183,78 @@ font-size:8px;
 opacity:.45;
 letter-spacing:.5px;
 }
+/* BACK TO TOP */
+#backToTop{
+position:fixed;
+right:25px;
+bottom:25px;
 
+width:46px;
+height:46px;
+
+border:1px solid #333;
+border-radius:50%;
+
+background:#050505;
+color:#f5f5f5;
+
+font-size:20px;
+font-weight:300;
+line-height:1;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+cursor:pointer;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(15px);
+
+transition:
+opacity .3s ease,
+visibility .3s ease,
+transform .3s ease,
+background .3s ease,
+color .3s ease;
+
+z-index:9997;
+}
+
+#backToTop.show{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+#backToTop:hover{
+background:#20C9C3;
+color:#050505;
+border-color:#20C9C3;
+}
+
+body.light-mode #backToTop{
+background:#fff;
+color:#050505;
+border-color:#ddd;
+}
+
+body.light-mode #backToTop:hover{
+background:#20C9C3;
+color:#050505;
+border-color:#20C9C3;
+}
+
+@media(max-width:600px){
+#backToTop{
+right:18px;
+bottom:18px;
+width:42px;
+height:42px;
+font-size:18px;
+}
+}
 /* BRAND COLORS */
 
 .instagram-icon{
@@ -2060,6 +2152,7 @@ searchInput.addEventListener("input", function() {
 });
 
 </script>
-  
+  <!-- BACK TO TOP -->
+<button id="backToTop" aria-label="Back to top">↑</button>
 </body>
 </html>
