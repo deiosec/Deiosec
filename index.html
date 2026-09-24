@@ -265,8 +265,9 @@ flex-direction:column;
 align-items:center;
 gap:12px;
 
-font-size:12px;
-letter-spacing:2px;
+font-size:11px;
+font-weight:500;
+letter-spacing:1.5px;
 
 text-decoration:none;
 color:inherit;
@@ -302,19 +303,43 @@ gap:16px;
 
 .menu-contact a{
 display:flex;
-justify-content:space-between;
-gap:15px;
+align-items:center;
+justify-content:flex-start;
 
-font-size:9px;
+gap:13px;
+
+font-size:10px;
 letter-spacing:1px;
 
 text-decoration:none;
 color:inherit;
+
+opacity:1;
 }
 
-.menu-contact a span:last-child{
-opacity:.45;
-text-align:right;
+.menu-contact a > span:last-child{
+opacity:1;
+text-align:left;
+
+display:flex;
+flex-direction:column;
+gap:3px;
+}
+
+.menu-contact strong{
+font-size:10px;
+font-weight:500;
+letter-spacing:1px;
+
+color:inherit;
+}
+
+.menu-contact small{
+font-size:8px;
+letter-spacing:.5px;
+
+color:inherit;
+opacity:.65;
 }
 
 /* OPEN MENU */
