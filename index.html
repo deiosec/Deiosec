@@ -113,6 +113,151 @@ opacity:.6;
     opacity: 0.6;
 }
 
+  /* DEIOCES MENU STRUCTURE */
+
+@media(max-width:600px){
+
+.menu-header{
+position:absolute;
+top:25px;
+left:25px;
+right:25px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+font-size:17px;
+letter-spacing:3px;
+font-weight:500;
+
+z-index:20;
+}
+
+#closeMenu{
+background:transparent;
+border:none;
+color:inherit;
+
+font-size:30px;
+font-weight:300;
+
+line-height:1;
+padding:4px;
+
+cursor:pointer;
+}
+
+/* SEARCH + THEME */
+
+.menu-tools{
+display:flex;
+align-items:center;
+gap:22px;
+
+margin-bottom:18px;
+}
+
+.menu-tools button{
+background:transparent;
+border:none;
+
+color:inherit;
+
+font-size:24px;
+padding:4px;
+
+cursor:pointer;
+}
+
+/* LINE */
+
+.menu-divider{
+width:100%;
+height:1px;
+background:currentColor;
+opacity:.18;
+
+margin:8px 0 28px;
+}
+
+/* MAIN MENU */
+
+.menu-main{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+
+width:100%;
+gap:15px;
+}
+
+.menu-main a{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:12px;
+
+font-size:15px;
+letter-spacing:2px;
+
+text-decoration:none;
+color:inherit;
+}
+
+.menu-icon{
+font-size:25px;
+line-height:1;
+}
+
+/* SECONDARY */
+
+.menu-secondary{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.menu-secondary a{
+font-size:13px;
+letter-spacing:2px;
+text-decoration:none;
+color:inherit;
+}
+
+/* CONTACT */
+
+.menu-contact{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.menu-contact a{
+display:flex;
+justify-content:space-between;
+gap:15px;
+
+font-size:10px;
+letter-spacing:1px;
+
+text-decoration:none;
+color:inherit;
+}
+
+.menu-contact a span:last-child{
+opacity:.45;
+text-align:right;
+}
+
+/* OPEN MENU */
+
+body.menu-open .logo{
+opacity:0;
+pointer-events:none;
+}
+
+}
+
 /* FULLSCREEN MENU */
 
 @media(max-width:600px){
@@ -1081,16 +1226,81 @@ align-items:flex-start;
 
 <div class="menu-header">
 <span>DEIOCES</span>
+
 <button id="closeMenu" aria-label="Close Menu">×</button>
 </div>
 
-<a href="#work">WORK</a>
-<a href="#about">ABOUT</a>
-<a href="#contact">CONTACT</a>
+<div class="menu-tools">
 
 <button id="searchToggle" aria-label="Search">⌕</button>
 
 <button id="themeToggle" onclick="toggleTheme()">☀</button>
+
+</div>
+
+<div class="menu-divider"></div>
+
+<div class="menu-main">
+
+<a href="#work">
+<span class="menu-icon">▣</span>
+WORK
+</a>
+
+<a href="#about">
+<span class="menu-icon">◇</span>
+ABOUT
+</a>
+
+<a href="#contact">
+<span class="menu-icon">◎</span>
+CONTACT
+</a>
+
+</div>
+
+<div class="menu-divider"></div>
+
+<div class="menu-secondary">
+
+<a href="#work">PROJECTS</a>
+
+<a href="#contact">SERVICES</a>
+
+<a href="#about">ABOUT DEIOCES</a>
+
+</div>
+
+<div class="menu-divider"></div>
+
+<div class="menu-contact">
+
+<a href="https://www.instagram.com/thedeioces" target="_blank">
+<span>Instagram</span>
+<span>@thedeioces</span>
+</a>
+
+<a href="https://t.me/Deioces_support" target="_blank">
+<span>Telegram</span>
+<span>@Deioces_support</span>
+</a>
+
+<a href="mailto:deioces1378@gmail.com">
+<span>Email</span>
+<span>deioces1378@gmail.com</span>
+</a>
+
+<a href="tel:09195626536">
+<span>Phone</span>
+<span>09195626536</span>
+</a>
+
+<a href="tel:09015626536">
+<span>Phone 02</span>
+<span>09015626536</span>
+</a>
+
+</div>
 
 </div>
 
@@ -1535,9 +1745,6 @@ function closeMenuFunction(){
     navMenu.classList.remove("active");
     document.body.classList.remove("menu-open");
 
-    menuToggle.textContent = "☰";
-    menuToggle.setAttribute("aria-label", "Open Menu");
-
     menuToggle.style.opacity = "1";
     menuToggle.style.pointerEvents = "auto";
 
@@ -1545,18 +1752,9 @@ function closeMenuFunction(){
 
 menuToggle.addEventListener("click", function(){
 
-    if(navMenu.classList.contains("active")){
-
-        closeMenuFunction();
-
-    }else{
-
-        openMenu();
-
-    }
+    openMenu();
 
 });
-
 
 closeMenu.addEventListener("click", function(){
 
@@ -1564,17 +1762,15 @@ closeMenu.addEventListener("click", function(){
 
 });
 
-
 navMenu.addEventListener("click", function(event){
 
-    if(event.target.tagName === "A"){
+    if(event.target.closest("a")){
 
         closeMenuFunction();
 
     }
 
 });
-
 
 document.addEventListener("click", function(event){
 
